@@ -1,0 +1,16 @@
+﻿<Window x:Class="StreamViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" WindowState="Maximized">
+    <UniformGrid>
+        <Grid>
+            <Image Source="{Binding KinectColorImage}"></Image>
+        </Grid>
+        <Grid>
+            <Image Source="{Binding KinectDepthImage}"></Image>
+        </Grid>
+        <Grid>
+            <Image Source="{Binding Path=KinectSkeletonImage, UpdateSourceTrigger=PropertyChanged}" />
+        </Grid>
+    </UniformGrid>
+</Window>
